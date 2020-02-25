@@ -1,12 +1,13 @@
 import { Router } from 'express';
 
 import RecipientsController from './app/controllers/RecipientsController';
-import AdminController from './app/controllers/AdminController';
+// import UsersController from './app/controllers/UsersController';
+import SessionController from './app/controllers/SessionController';
 
 const routes = new Router();
 
-/* ADMIN */
-routes.put('/admin', AdminController.update);
+/* SESSION */
+routes.post('/session', SessionController.store);
 
 /* RECIPIENTS */
 routes.post('/recipients', RecipientsController.store);
