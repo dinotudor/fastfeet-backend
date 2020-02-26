@@ -1,20 +1,22 @@
 import { Router } from 'express';
 
 import RecipientsController from './app/controllers/RecipientsController';
-
 import SessionController from './app/controllers/SessionController';
+
+import AuthMiddleware from './app/middlewares/auth';
 
 const routes = new Router();
 
 /* SESSION */
 routes.post('/session', SessionController.store);
 
+/* AUTHENTICATION MIDDLEWARE */
+routes.use(AuthMiddleware);
+
 /* RECIPIENTS */
 routes.post('/recipients', RecipientsController.store);
 
-/* TEST */
-routes.get('/', (req, res) => {
-  return res.json({ message: `Hola mundo! Que tal? 2+2=?? -> ${2 + 2} ` });
+
 });
 
 export default routes;

@@ -7,8 +7,7 @@ import User from '../models/User';
 class SessionController {
   async store(req, res) {
     const { email, password } = req.body;
-    // console.log(req.body);
-    // console.log(`EMAIL -> ${email} PASSWORD -> ${password}`);
+
     const user = await User.findOne({ where: { email } });
 
     if (!user) {

@@ -28,4 +28,8 @@ class RecipientsController {
   }
 }
 
+async update(req, res) {
+  return 'Hola!'
+}
+
 export default new RecipientsController();
