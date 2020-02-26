@@ -5,7 +5,6 @@ class Recipients extends Model {
     super.init(
       {
         name: Sequelize.STRING,
-        email: Sequelize.STRING,
         address: Sequelize.STRING,
         number: Sequelize.INTEGER,
         complement: Sequelize.STRING,

@@ -28,7 +28,15 @@ class RecipientsController {
   }
 
   async update(req, res) {
-    return res.json({ ok: true });
+    const recipient = await Recipients.findByPk(req.params.id);
+
+    if (!recipient) {
+      return res.status(401).json({ error: 'Invalid recipient' });
+    }
+
+    await recipient.update(req.body);
+
+    return res.json({ recipient });
   }
 }
 
