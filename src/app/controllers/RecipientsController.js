@@ -26,10 +26,10 @@ class RecipientsController {
       country,
     });
   }
-}
 
-async update(req, res) {
-  return 'Hola!'
+  async update(req, res) {
+    return res.json({ ok: true });
+  }
 }
 
 export default new RecipientsController();
