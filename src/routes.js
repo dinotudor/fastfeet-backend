@@ -7,9 +7,8 @@ import SessionController from './app/controllers/SessionController';
 
 import AuthMiddleware from './app/middlewares/auth';
 
-const upload = multer(multerConfig);
-
 const routes = new Router();
+const upload = multer(multerConfig);
 
 /* SESSION */
 routes.post('/session', SessionController.store);
