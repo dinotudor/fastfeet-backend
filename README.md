@@ -5,12 +5,12 @@
 ### Rest API using express with basic CRUD operations to serve the frontend (desktop and mobile) application.
 
 **Basic Description:**
-\_Admin User can manage list of reciepients that contain addresses to deliver products. Only Admin user can login onto the system to manage the client list, adding, editing, displaying and deleting the recipients as the service demands it. Using MVC (Model, View and Controller architecture
+_Admin User can manage list of reciepients that contain addresses to deliver products. Only Admin user can login onto the system to manage the client list, adding, editing, displaying and deleting the recipients as the service demands it. Using MVC (Model, View and Controller architecture)_
 
 #### Development dependencies and plugins:
 
 - Sucrase _ES6 syntax_, `import` modules and `export default`
-- Nodemon - _Live server_ to run local developmet
+- Nodemon - _Live server_ to run local development
 - Eslint - _Air Bnb style guide_
 - Prettier
 - bcryptjs - _Password encryptation_
