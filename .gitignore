@@ -25,6 +25,9 @@ ehthumbs.db
 Thumbs.db
 desktop.ini
 
+# tmp
+tmp/
+
 # auth
 src/config/auth.js
 # dotenv
