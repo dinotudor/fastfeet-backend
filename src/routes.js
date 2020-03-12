@@ -4,7 +4,7 @@ import multerConfig from './config/multer';
 
 import RecipientsController from './app/controllers/RecipientsController';
 import SessionController from './app/controllers/SessionController';
-import CourierController from './app/controllers/CouriersController';
+// import CourierController from './app/controllers/CouriersController';
 
 import AuthMiddleware from './app/middlewares/auth';
 
@@ -24,6 +24,10 @@ routes.put('/recipients/:id', RecipientsController.update);
 routes.delete('/recipients/:id', RecipientsController.delete);
 
 /* FILES */
-routes.post('/files', upload.single('file'), CourierController.store);
+// routes.post('/files', upload.single('file'), CourierController.store);
+routes.post('/files', upload.single('file'), (req, res) => {
+  console.log(req.file);
+  return res.json(req.file);
+});
 
 export default routes;
