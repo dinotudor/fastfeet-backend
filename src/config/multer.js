@@ -4,7 +4,7 @@ import { resolve } from 'path';
 
 export default {
   storage: multer.diskStorage({
-    destination: resolve(__dirname, '..', 'tmp', 'uploads'),
+    destination: resolve(__dirname, '..', '..', 'tmp', 'uploads'),
     filename: (req, file, cb) => {
       return cb(null, file.originalname);
     },

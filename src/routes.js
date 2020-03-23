@@ -25,9 +25,9 @@ routes.delete('/recipients/:id', RecipientsController.delete);
 
 /* FILES */
 // routes.post('/files', upload.single('file'), CourierController.store);
-routes.post('/files', upload.single('courier'), (req, res) => {
-  console.log(req.body);
-  return res.json(req.file);
+routes.post('/files', upload.single('file'), (req, res) => {
+  console.log(res);
+  return res.json({ ok: true });
 });
 
 export default routes;
