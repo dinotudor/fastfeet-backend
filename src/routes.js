@@ -4,7 +4,7 @@ import multerConfig from './config/multer';
 
 import RecipientsController from './app/controllers/RecipientsController';
 import SessionController from './app/controllers/SessionController';
-// import CourierController from './app/controllers/CouriersController';
+import CourierController from './app/controllers/CouriersController';
 
 import AuthMiddleware from './app/middlewares/auth';
 
@@ -29,5 +29,8 @@ routes.post('/files', upload.single('file'), (req, res) => {
   console.log(res);
   return res.json({ ok: true });
 });
+
+/* COURIERS */
+routes.post('/couriers', CourierController.store);
 
 export default routes;
